@@ -5,8 +5,7 @@ from d2l import torch as d2l
 batch_size = 256
 train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size)
 
-# PyTorch不会隐式地调整输入的形状。因此，
-# 我们在线性层前定义了展平层（flatten），来调整网络输入的形状
+# PyTorch不会隐式地调整输入的形状。因此，我们在线性层前定义了展平层（flatten），来调整网络输入的形状
 net = nn.Sequential(nn.Flatten(), nn.Linear(784, 10))
 
 
